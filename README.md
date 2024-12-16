@@ -90,7 +90,7 @@ sudo pip uninstall xgboost transformer_engine flash_attn -y
 
 # Or git clone
 git clone git@github.com:wilkincr/585project.git
-cd OpenRLHF
+cd 585project
 pip install -e .
 ```
 ### Run
