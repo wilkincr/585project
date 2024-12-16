@@ -82,7 +82,6 @@ def train(args):
 
     # load weights for reference actor
     if not isinstance(actor.model, PeftModel):
-        print("Need reference model")
         initial_model = Actor(
             args.pretrain,
             use_flash_attention_2=args.flash_attn,
@@ -90,11 +89,6 @@ def train(args):
             load_in_4bit=args.load_in_4bit,
             ds_config=strategy.get_ds_eval_config(offload=False),
         )
-    else:
-        print("WORKING!!!")
-        print("WORKING!!!")
-        print("WORKING!!!")
-        print("WORKING!!!")
 
     if args.enable_ema:
         ema_model = Actor(

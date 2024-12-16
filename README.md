@@ -89,12 +89,11 @@ docker run --runtime=nvidia -it --rm --shm-size="10g" --cap-add=SYS_ADMIN -v $PW
 sudo pip uninstall xgboost transformer_engine flash_attn -y
 
 # Or git clone
-git clone https://github.com/wilkincr/585project.git
+git clone git@github.com:wilkincr/585project.git
 cd OpenRLHF
 pip install -e .
 ```
 ### Run
-In openrlhf directory:
 ```bash
 ./examples/script/train_ppo_qwen_small.sh
 ```
